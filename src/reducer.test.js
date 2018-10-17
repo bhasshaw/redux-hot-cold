@@ -20,7 +20,6 @@ describe('Reducer', () => {
 
     describe('restartGame', () => {
         it('Should start a new game', () => {
-            // Mess up the state a bit to simulate an existing game
             let state = {
                 guesses: [1, 2, 3, 4],
                 feedback: 'Awesome',
@@ -37,11 +36,10 @@ describe('Reducer', () => {
 
     describe('makeGuess', () => {
         it('Should make a guess', () => {
-            // Fix the correct answer so we know what we're aiming for
             let state = {
                 guesses: [],
                 feedback: '',
-                correctAnswer: 100 // Negative so different to new game
+                correctAnswer: 100
             };
 
             state = reducer(state, makeGuess(25));
